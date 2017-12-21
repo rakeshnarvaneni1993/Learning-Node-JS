@@ -1,7 +1,15 @@
-var fs = require('fs');
-var os = require('os');
-var userInfo = os.userInfo();
+var sample = {
+    firstName : 'Rakesh',
+    lastName : 'Narvaneni',
+    printFirstName : () => {
+        console.log(this.firstName);
+        console.log(arguments);
+    },
+    printLastName : function() {
+        console.log(arguments);
+        console.log(this.lastName);
+    },
+}
 
-fs.appendFile('test.txt', 'This is first append');
-
-fs.appendFile('test.txt', `This computer belongs to ${userInfo.username}`);
+sample.printFirstName(1,2,3);
+sample.printLastName(1,2,3);
