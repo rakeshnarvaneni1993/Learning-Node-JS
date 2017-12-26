@@ -1,15 +1,25 @@
-var sample = {
-    firstName : 'Rakesh',
-    lastName : 'Narvaneni',
-    printFirstName : () => {
-        console.log(this.firstName);
-        console.log(arguments);
-    },
-    printLastName : function() {
-        console.log(arguments);
-        console.log(this.lastName);
-    },
-}
 
-sample.printFirstName(1,2,3);
-sample.printLastName(1,2,3);
+var yargs = require('yargs').argv;
+var helper = require('./helper-function');
+var wether = require('./get-weather-data')
+var request = require('request')
+
+
+var address = yargs.address;
+
+helper.getLatAndLong(address, (errorMessage, results) => {
+        if(errorMessage){
+            console.log(errorMessage);
+        } else{
+        wether.getWeatherInfo(results, (errorMessage, wetherResults) => {
+        if(errorMessage){
+            console.log(errorMessage);
+        } else{
+            console.log(wetherResults.currently.temperature);
+            // console.log(JSON.stringify(wetherResults, undefined, 2))
+        }
+    })
+    }
+    });
+
+
