@@ -1,4 +1,4 @@
-This branch explains the usage of callback functions using google and weather APIs
+This branch explains the usage of Promises using google and weather APIs
 
 Instructions to use:
 
