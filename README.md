@@ -1,6 +1,8 @@
 # Learning-Node-JS
 A series of exercises in the process of learning Node JS
 
-Each branch represents the topics I have learnt over the holiday period of 2017.
+Testing:
 
-Please select a branch to learn more.
+1. Using jest and Mocha to test the application. 
+2. This app uses CryptoCompare API to fetch the data of the top CryptoCurrencies.
+3. The fetched data is passed into HBS template and data is represented there.
