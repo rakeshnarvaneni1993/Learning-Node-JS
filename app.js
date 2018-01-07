@@ -5,6 +5,7 @@ var hbs = require('hbs');
 var names = require('./utils/getNames');
 var prices = require('./utils/getPrices');
 
+var port = process.env.PORT || 3000;
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
 hbs.registerPartials(__dirname + '/views/partials');
@@ -39,6 +40,6 @@ app.get('/', (req, res) => {
 	}, 1000)
 })
 
-app.listen(3000, () => {
-	console.log('App started on port 3000');
+app.listen(port, () => {
+	console.log(`Server started on port ${port}`);
 })
