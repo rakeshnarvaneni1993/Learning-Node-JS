@@ -1,6 +1,7 @@
 # Learning-Node-JS
 A series of exercises in the process of learning Node JS
 
+This app is deployed at: https://arcane-peak-88697.herokuapp.com/
 Testing:
 
 1. Using jest and Mocha to test the application. 
