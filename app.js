@@ -14,8 +14,7 @@ const listOfCoins = ['BTC', 'BCC', 'LTC', 'ETH', 'XRP', 'XLM'];
 const imageBaseUrl = 'https://www.cryptocompare.com';
 
 app.get('/', (req, res) => {
-	setInterval(()=>{
-		console.log('refreshed')
+	// setInterval(()=>{
 		names.getNamesOfCoins((error, data) => {
 		var coinNamesDataInJson = JSON.parse(data);
 		var coinsData = [];
@@ -37,8 +36,11 @@ app.get('/', (req, res) => {
 			})
 		}
 	});
-	}, 1000)
+	// }, 1000)
 })
+
 app.listen(port, () => {
 	console.log(`Server started on port ${port}`);
-})
+});
+
+module.exports.app = app;

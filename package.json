@@ -16,7 +16,9 @@
     "request": "^2.83.0"
   },
   "devDependencies": {
+    "expect": "^22.0.3",
     "jest": "^22.0.4",
-    "mocha": "^4.1.0"
+    "mocha": "^4.1.0",
+    "supertest": "^3.0.0"
   }
 }
